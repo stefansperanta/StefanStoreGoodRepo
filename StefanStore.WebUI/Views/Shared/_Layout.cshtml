@@ -1,0 +1,34 @@
+﻿@using StefanStore.Repository.Abstract.UnitOfWork
+@using StefanStore.Service
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header">
+        @if (ViewContext.RouteData.Values["action"].ToString() != "ListCartItems"
+            && ViewContext.RouteData.Values["action"].ToString() != "Checkout")
+        {
+            Html.RenderAction("Summary", "Cart", new { isCheckOutLinkVisible = true });
+        }
+        else
+        {
+            Html.RenderAction("Summary", "Cart", new { isCheckOutLinkVisible = false });
+        }
+        <div class="title">Stefan STORE</div>
+    </div>
+    <div id="categories">
+        @{ Html.RenderAction("Menu", "Navigation"); }
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+</body>
+</html>

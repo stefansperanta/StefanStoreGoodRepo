@@ -1,0 +1,13 @@
+﻿@model StefanStoreDTO.ProductDto.ProductDto
+
+<div class="item">
+    <h3>@Model.Name</h3>
+    @Model.Description
+    <h4>@Model.Price.ToString("c")</h4>
+
+    @using (Html.BeginForm("AddProductToCart", "Cart"))
+    {
+        @Html.HiddenFor(x => x.ProductId)
+        <input type="submit" value="+ Add to cart" />
+    }
+</div>

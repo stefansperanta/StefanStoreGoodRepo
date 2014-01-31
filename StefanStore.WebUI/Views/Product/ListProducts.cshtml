@@ -1,0 +1,14 @@
+﻿@model StefanStoreDTO.ProductDto.ProductServiceListProductsResponse
+@{
+    ViewBag.Title = "Products";
+}
+
+@foreach (var p in Model.Products)
+{
+    Html.RenderPartial("ProductSummary", p);
+}
+
+<div class="pager">
+    @Html.CreatePageLinks(Model.PagingInfo, x => Url.Action("ListProducts",
+new { page = x, category = Model.CurrentCategory }))
+</div>

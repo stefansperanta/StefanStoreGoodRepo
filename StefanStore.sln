@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefanStore.Domain", "StefanStore.Domain\StefanStore.Domain.csproj", "{505C7104-DB14-4A7F-816A-1FD8276B7CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefanStore.Service", "StefanStore.Service\StefanStore.Service.csproj", "{B20D007A-DF24-4DCC-B629-452631D4972F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefanStore.WebUI", "StefanStore.WebUI\StefanStore.WebUI.csproj", "{823C19ED-A393-4144-B16E-ED47E465F1FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefanStore.Infrastructure", "StefanStore.Infrastructure\StefanStore.Infrastructure.csproj", "{6482B549-0799-4752-B30A-21DE659F5912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefanStore.Repository", "StefanStore.Repository\StefanStore.Repository.csproj", "{8E797A62-8456-4579-AA43-940B1B21A3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefanStore.UnitTests", "StefanStore.UnitTests2\StefanStore.UnitTests.csproj", "{11AC7D7C-8CA3-4500-BE78-DAF9110254D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefanStore.DTO", "DTO\StefanStore.DTO.csproj", "{4373544B-CFE6-4A06-BA1C-5DFC550C9233}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.188.37.20:8080/tfs/internaltrainning
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = StefanStore.Domain\\StefanStore.Domain.csproj
+		SccProjectName1 = StefanStore.Domain
+		SccLocalPath1 = StefanStore.Domain
+		SccProjectUniqueName2 = StefanStore.Service\\StefanStore.Service.csproj
+		SccProjectName2 = StefanStore.Service
+		SccLocalPath2 = StefanStore.Service
+		SccProjectUniqueName3 = StefanStore.WebUI\\StefanStore.WebUI.csproj
+		SccProjectName3 = StefanStore.WebUI
+		SccLocalPath3 = StefanStore.WebUI
+		SccProjectUniqueName4 = StefanStore.Infrastructure\\StefanStore.Infrastructure.csproj
+		SccProjectName4 = StefanStore.Infrastructure
+		SccLocalPath4 = StefanStore.Infrastructure
+		SccProjectUniqueName5 = StefanStore.Repository\\StefanStore.Repository.csproj
+		SccProjectName5 = StefanStore.Repository
+		SccLocalPath5 = StefanStore.Repository
+		SccProjectUniqueName6 = StefanStore.UnitTests2\\StefanStore.UnitTests.csproj
+		SccProjectName6 = StefanStore.UnitTests2
+		SccLocalPath6 = StefanStore.UnitTests2
+		SccProjectUniqueName7 = DTO\\StefanStore.DTO.csproj
+		SccProjectName7 = DTO
+		SccLocalPath7 = DTO
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{505C7104-DB14-4A7F-816A-1FD8276B7CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505C7104-DB14-4A7F-816A-1FD8276B7CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505C7104-DB14-4A7F-816A-1FD8276B7CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505C7104-DB14-4A7F-816A-1FD8276B7CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20D007A-DF24-4DCC-B629-452631D4972F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20D007A-DF24-4DCC-B629-452631D4972F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B20D007A-DF24-4DCC-B629-452631D4972F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B20D007A-DF24-4DCC-B629-452631D4972F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823C19ED-A393-4144-B16E-ED47E465F1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823C19ED-A393-4144-B16E-ED47E465F1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823C19ED-A393-4144-B16E-ED47E465F1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823C19ED-A393-4144-B16E-ED47E465F1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6482B549-0799-4752-B30A-21DE659F5912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6482B549-0799-4752-B30A-21DE659F5912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6482B549-0799-4752-B30A-21DE659F5912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6482B549-0799-4752-B30A-21DE659F5912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E797A62-8456-4579-AA43-940B1B21A3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E797A62-8456-4579-AA43-940B1B21A3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E797A62-8456-4579-AA43-940B1B21A3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E797A62-8456-4579-AA43-940B1B21A3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11AC7D7C-8CA3-4500-BE78-DAF9110254D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11AC7D7C-8CA3-4500-BE78-DAF9110254D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11AC7D7C-8CA3-4500-BE78-DAF9110254D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11AC7D7C-8CA3-4500-BE78-DAF9110254D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4373544B-CFE6-4A06-BA1C-5DFC550C9233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4373544B-CFE6-4A06-BA1C-5DFC550C9233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4373544B-CFE6-4A06-BA1C-5DFC550C9233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4373544B-CFE6-4A06-BA1C-5DFC550C9233}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
