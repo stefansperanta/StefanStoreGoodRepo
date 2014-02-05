@@ -17,31 +17,44 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefanStore.DTO", "DTO\Stef
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://10.188.37.20:8080/tfs/internaltrainning
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = StefanStore.Domain\\StefanStore.Domain.csproj
-		SccProjectName1 = StefanStore.Domain
-		SccLocalPath1 = StefanStore.Domain
-		SccProjectUniqueName2 = StefanStore.Service\\StefanStore.Service.csproj
-		SccProjectName2 = StefanStore.Service
-		SccLocalPath2 = StefanStore.Service
-		SccProjectUniqueName3 = StefanStore.WebUI\\StefanStore.WebUI.csproj
-		SccProjectName3 = StefanStore.WebUI
-		SccLocalPath3 = StefanStore.WebUI
-		SccProjectUniqueName4 = StefanStore.Infrastructure\\StefanStore.Infrastructure.csproj
-		SccProjectName4 = StefanStore.Infrastructure
-		SccLocalPath4 = StefanStore.Infrastructure
-		SccProjectUniqueName5 = StefanStore.Repository\\StefanStore.Repository.csproj
-		SccProjectName5 = StefanStore.Repository
-		SccLocalPath5 = StefanStore.Repository
+		SccProjectUniqueName0 = DTO\\StefanStore.DTO.csproj
+		SccProjectName0 = DTO
+		SccAuxPath0 = http://10.188.37.20:8080/tfs/internaltrainning
+		SccLocalPath0 = DTO
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = StefanStore.Infrastructure\\StefanStore.Infrastructure.csproj
+		SccProjectName1 = StefanStore.Infrastructure
+		SccAuxPath1 = http://10.188.37.20:8080/tfs/internaltrainning
+		SccLocalPath1 = StefanStore.Infrastructure
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = StefanStore.Domain\\StefanStore.Domain.csproj
+		SccProjectName2 = StefanStore.Domain
+		SccAuxPath2 = http://10.188.37.20:8080/tfs/internaltrainning
+		SccLocalPath2 = StefanStore.Domain
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = StefanStore.Repository\\StefanStore.Repository.csproj
+		SccProjectName3 = StefanStore.Repository
+		SccAuxPath3 = http://10.188.37.20:8080/tfs/internaltrainning
+		SccLocalPath3 = StefanStore.Repository
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = StefanStore.Service\\StefanStore.Service.csproj
+		SccProjectName4 = StefanStore.Service
+		SccAuxPath4 = http://10.188.37.20:8080/tfs/internaltrainning
+		SccLocalPath4 = StefanStore.Service
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = StefanStore.WebUI\\StefanStore.WebUI.csproj
+		SccProjectName5 = StefanStore.WebUI
+		SccAuxPath5 = http://10.188.37.20:8080/tfs/internaltrainning
+		SccLocalPath5 = StefanStore.WebUI
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccProjectUniqueName6 = StefanStore.UnitTests2\\StefanStore.UnitTests.csproj
 		SccProjectName6 = StefanStore.UnitTests2
+		SccAuxPath6 = http://10.188.37.20:8080/tfs/internaltrainning
 		SccLocalPath6 = StefanStore.UnitTests2
-		SccProjectUniqueName7 = DTO\\StefanStore.DTO.csproj
-		SccProjectName7 = DTO
-		SccLocalPath7 = DTO
+		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,5 +92,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,25 @@
+﻿@model StefanStoreDTO.ProductDto.ProductServiceEditProductResponse
+
+@{
+    ViewBag.Title = "Admin: Edit " + @Model.Product.Name;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>EditProduct</h2>
+
+<h1>Edit @Model.Product.Name</h1>
+@using (Html.BeginForm())
+{
+    <div>@Html.HiddenFor(x => x.Product.ProductId)</div>
+    <label>Name</label>
+    <div>@Html.TextBoxFor(x => x.Product.Name, new { @class = "text-box" })</div>
+    <label>Description</label>
+    <div>@Html.TextAreaFor(x => x.Product.Description, new { @class = "text-box multi-line" })</div>
+    <label>Price</label>
+    <div>@Html.TextBoxFor(x => x.Product.Price, new { @class = "text-box" })</div>
+    <label>Category</label>
+    <div>@Html.TextBoxFor(x => x.Product.Category, new { @class = "text-box" })</div>
+    <div>
+        <input type="submit" value="Save" />
+        @Html.ActionLink("Cancel and return to List", "ListProducts")
+    </div>
+}

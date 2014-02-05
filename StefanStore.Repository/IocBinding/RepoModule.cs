@@ -28,8 +28,8 @@ namespace StefanStore.Repository.IocBinding
                 new Product {ProductID=11,Name = "Knife", Price = 66, Category ="Kitchen"}
             }.AsQueryable());
 
-            binder.BindToConstant<IUnitOfWork, IUnitOfWork>(mock.Object);
-            //binder.Bind<IUnitOfWork,StefanStoreUow>();
+            //binder.BindToConstant<IUnitOfWork, IUnitOfWork>(mock.Object);
+            binder.Bind<IUnitOfWork, StefanStoreUow>();
         }
     }
 }

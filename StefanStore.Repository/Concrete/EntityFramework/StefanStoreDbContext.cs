@@ -6,7 +6,7 @@ namespace StefanStore.Repository.Concrete
     public class StefanStoreDbContext : DbContext
     {
         public StefanStoreDbContext()
-            : base("Name=StefanStore") //this is the connection string name
+         //this is the connection string name
         {
         }
 

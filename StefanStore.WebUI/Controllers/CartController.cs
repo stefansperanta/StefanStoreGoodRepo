@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
 using System.Web.Mvc;
 using StefanStore.Service;
 using StefanStoreDTO.CartDto;
@@ -34,13 +35,31 @@ namespace StefanStore.WebUI.Controllers
             return RedirectToAction("ListCartItems");
         }
 
-        public ViewResult FastDelivery(CartDto cart, ShippingDetailsDto shippingDetails)
+        public object FastDelivery(CartDto cart, bool isFastDelivery, string city)
         {
-            var request = new CartServiceAddFastDeliveryRequest(cart, shippingDetails.FastDelivery);
+            city = "aaaaaaaa";
+
+            var request = new CartServiceAddFastDeliveryRequest(cart, isFastDelivery);
 
             _cartService.AddFastDelivery(request);
-            
-            return View("Checkout",shippingDetails);
+
+            ViewBag.IsCheckOutLinkVisible = false;
+
+            return Json(new { cartHtml = RenderRazorViewToString("Summary", cart), cityText = city }, JsonRequestBehavior.AllowGet);
+        }
+
+        [NonAction]
+        private string RenderRazorViewToString(string viewName, object model)
+        {
+            ViewData.Model = model;
+            using (var sw = new StringWriter())
+            {
+                var viewResult = ViewEngines.Engines.FindPartialView(ControllerContext, viewName);
+                var viewContext = new ViewContext(ControllerContext, viewResult.View, ViewData, TempData, sw);
+                viewResult.View.Render(viewContext, sw);
+                viewResult.ViewEngine.ReleaseView(ControllerContext, viewResult.View);
+                return sw.GetStringBuilder().ToString();
+            }
         }
 
         public RedirectToRouteResult RemoveProductFromCart(CartDto cart, int productId)

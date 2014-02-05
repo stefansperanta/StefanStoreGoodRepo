@@ -10,6 +10,8 @@ using StefanStore.Infrastructure;
 using StefanStore.Infrastructure.Concrete.NInject;
 using StefanStore.WebUI.Binders;
 using StefanStore.WebUI.Helpers;
+using StefanStore.WebUI.Infrastructure.Abstract;
+using StefanStore.WebUI.Infrastructure.Concrete;
 using StefanStoreDTO.CartDto;
 
 namespace StefanStore.WebUI
@@ -24,6 +26,8 @@ namespace StefanStore.WebUI
             DoMVCRegistrations();
 
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
+
+            NInjectBinder.Instance.Bind<IAuthProvider, FormsAuthProvider>();
 
             ModelBinders.Binders.Add(typeof(CartDto), new CartModelBinder());
 
@@ -57,7 +61,7 @@ namespace StefanStore.WebUI
 
         private List<Type> BrowseAssemblies()
         {
-            List<Type> modulesToBindTypes=new List<Type>();
+            List<Type> modulesToBindTypes = new List<Type>();
             foreach (var assembly in AssemblyLocator.GetBinFolderAssemblies())
             {
                 modulesToBindTypes.AddRange(BrowseTypesInAssembly(assembly));
@@ -68,7 +72,7 @@ namespace StefanStore.WebUI
         private List<Type> BrowseTypesInAssembly(Assembly assembly)
         {
             Type moduleType = typeof(IAppModule);
-            List<Type> modulesToBind=new List<Type>();
+            List<Type> modulesToBind = new List<Type>();
             foreach (Type t in assembly.GetTypes())
             {
                 if (moduleType.IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract)

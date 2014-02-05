@@ -1,6 +1,4 @@
-﻿@using System.Data.Entity.ModelConfiguration.Conventions
-@using System.Web.UI.WebControls
-@model StefanStoreDTO.ShippingDto.ShippingDetailsDto
+﻿@model StefanStoreDTO.ShippingDto.ShippingDetailsDto
 
 @{
     ViewBag.Title = "SportStore: Checkout";
@@ -9,11 +7,7 @@
 <h2>Check out now</h2>
 Please enter your details, and we'll ship your goods right away!
 
-@using (Ajax.BeginForm("Checkout", "Cart", new AjaxOptions
-{
-    HttpMethod = "Post",
-    UpdateTargetId = "cart"
-}))
+@using (Html.BeginForm("Checkout", "Cart"))
 {
     @Html.ValidationSummary()
     <h3>Ship to</h3>
@@ -28,7 +22,8 @@ Please enter your details, and we'll ship your goods right away!
     <div>Country: @Html.EditorFor(x => x.Country)</div>
     <h3>Options</h3>
     <label>
-        @Html.CheckBoxFor(x => x.FastDelivery)
+        @Html.EditorFor(x => x.FastDelivery)
+        Fast delivery
     </label>
     <p align="center" class="actionButtons">
         @Html.ActionLink("Back", "Back")
@@ -37,54 +32,18 @@ Please enter your details, and we'll ship your goods right away!
     <script>
         $("#FastDelivery").click(function () {
             $.ajax({
-                data: { 'FastDelivery': $('#FastDelivery').val() },
+                data: {
+                    isFastDelivery: $('#FastDelivery').is(':checked'),
+                    city: $('#City').val()
+                },
                 url: '@Url.Action("FastDelivery", "Cart")',
-                type: "POST",
-                success: function (data) { }
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //$("#City").val(data.cityText);
+                    $("#cart").html(data.cartHtml);
+                }
             });
         });
     </script>
 }
-
-
-
-@*@using (Html.BeginForm("Checkout", "Cart", FormMethod.Post))
-{
-    @Html.ValidationSummary()
-    <h3>Ship to</h3>
-    <div>Name: @Html.EditorFor(x => x.Name)</div>
-    <h3>Address</h3>
-    <div>Line 1: @Html.EditorFor(x => x.Line1)</div>
-    <div>Line 2: @Html.EditorFor(x => x.Line2)</div>
-    <div>Line 3: @Html.EditorFor(x => x.Line3)</div>
-    <div>City: @Html.EditorFor(x => x.City)</div>
-    <div>State: @Html.EditorFor(x => x.State)</div>
-    <div>Zip: @Html.EditorFor(x => x.Zip)</div>
-    <div>Country: @Html.EditorFor(x => x.Country)</div>
-    <h3>Options</h3>
-    <label>
-        @Html.CheckBoxFor(x => x.FastDelivery)
-    </label>
-    <p align="center" class="actionButtons">
-        @Html.ActionLink("Back", "Back")
-        <input type="submit" class="actionButtons" value="Complete order" />
-    </p>
-    
-        <script>
-        $("#FastDelivery").click(function () {
-            $.ajax({
-                data: { 'vvvv': $('#FastDelivery').val() },
-                url: '@Url.Action("FastDelivery", "Cart")',
-                type: "POST",
-                success: function (data) { }
-            });
-        });
-    </script>
-}
-
-
-*@
-
-
-
-
